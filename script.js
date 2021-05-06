@@ -1,6 +1,7 @@
 const captureVideoButton = document.querySelector(".screenshot .capture-button");
 const captureStopButton = document.querySelector(".screenshot .stop-button");
 const cssFiltersButton = document.querySelector(".screenshot .cssfilters-apply");
+const filterSelect = document.querySelector('select#filter');
 const screenshotButton = document.querySelector(".screenshot .screenshot-button");
 
 const video = document.querySelector(".screenshot video");
@@ -55,8 +56,15 @@ captureStopButton.onclick = function () {
     }
 }
 
-cssFiltersButton.onclick = video.onclick = function () {
-    video.className = filters[filterIndex++ % filters.length];
+/*
+filterSelect.onchange = function() {
+    video.className = filterSelect.value;
+};
+*/
+
+//cssFiltersButton.onclick = video.onclick = function () {
+cssFiltersButton.onclick = function () {
+    video.className = filterSelect.value;
 };
 
 screenshotButton.onclick = function () {
@@ -65,6 +73,7 @@ screenshotButton.onclick = function () {
     canvas.getContext("2d").drawImage(video, 0, 0);
     // Other browsers will fall backto image/png
     img.src = canvas.toDataURL("image/webp");
+    img.className = filterSelect.value;
 }
 
 function handleSuccess(stream) {
