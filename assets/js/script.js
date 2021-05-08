@@ -1,11 +1,11 @@
-const captureVideoButton = document.querySelector(".screenshot .capture-button");
-const captureStopButton = document.querySelector(".screenshot .stop-button");
-const cssFiltersButton = document.querySelector(".screenshot .cssfilters-apply");
+const captureVideoButton = document.querySelector(".capture-button");
+const captureStopButton = document.querySelector(".stop-button");
+const cssFiltersButton = document.querySelector(".cssfilters-apply");
 const filterSelect = document.querySelector('select#filter');
-const screenshotButton = document.querySelector(".screenshot .screenshot-button");
+const screenshotButton = document.querySelector(".screenshot-button");
 
-const video = document.querySelector(".screenshot video");
-const img = document.querySelector(".screenshot img");
+const video = document.querySelector("video");
+const img = document.querySelector("img");
 
 const canvas = document.createElement("canvas");
 
