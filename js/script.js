@@ -35,14 +35,14 @@ const filters = [
  */
 
 
-captureVideoButton.onclick = function () {
+captureVideoButton.onclick = function() {
     navigator.mediaDevices
         .getUserMedia(contraints)
         .then(handleSuccess)
         .catch(handleError);
 }
 
-captureStopButton.onclick = function () {
+captureStopButton.onclick = function() {
 
     if (window.stream) {
         captureVideoButton.disabled = false;
@@ -50,7 +50,7 @@ captureStopButton.onclick = function () {
         cssFiltersButton.disabled = true;
         captureStopButton.disabled = true;
 
-        window.stream.getTracks().forEach(function (track) {
+        window.stream.getTracks().forEach(function(track) {
             track.stop();
         });
     }
@@ -63,11 +63,11 @@ filterSelect.onchange = function() {
 */
 
 //cssFiltersButton.onclick = video.onclick = function () {
-cssFiltersButton.onclick = function () {
+cssFiltersButton.onclick = function() {
     video.className = filterSelect.value;
 };
 
-screenshotButton.onclick = function () {
+screenshotButton.onclick = function() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext("2d").drawImage(video, 0, 0);

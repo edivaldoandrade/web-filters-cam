@@ -1,26 +1,27 @@
-.screenshot
-{
+.screenshot {
     text-align: center;
 }
 
-.capture-button, .stop-button, .screenshot-button, .cssfilters-apply
-{
+.capture-button,
+.stop-button,
+.screenshot-button,
+.cssfilters-apply {
     vertical-align: inherit;
 }
 
-canvas
-{
+canvas {
     display: none;
 }
 
-video, img
-{
+video,
+img {
     width: 400px;
     height: 300px;
 }
 
-video, img {
-    background:#222;
+video,
+img {
+    background: #222;
     border: 1px solid #ccc;
 }
 
@@ -29,36 +30,37 @@ button {
     padding-left: 2px;
     padding-right: 2px;
     width: 99px;
-  }
+}
 
 
 /*
 Filters
 */
-.blur 
-{
+
+.blur {
     -webkit-filter: blur(3px);
     -moz-filter: blur(3px);
     -o-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
 }
-.brightness 
-{
+
+.brightness {
     -webkit-filter: brightness(5);
     -moz-filter: brightness(5);
     -o-filter: brightness(5);
     -ms-filter: brightness(5);
     filter: brightness(5);
 }
-.contrast 
-{
+
+.contrast {
     -webkit-filter: contrast(8);
     -moz-filter: contrast(8);
     -o-filter: contrast(8);
     -ms-filter: contrast(8);
     filter: contrast(8);
 }
+
 .hue-rotate {
     -webkit-filter: hue-rotate(90deg);
     -moz-filter: hue-rotate(90deg);
@@ -66,6 +68,7 @@ Filters
     -ms-filter: hue-rotate(90deg);
     filter: hue-rotate(90deg);
 }
+
 .hue-rotate2 {
     -webkit-filter: hue-rotate(180deg);
     -moz-filter: hue-rotate(180deg);
@@ -73,22 +76,23 @@ Filters
     -ms-filter: hue-rotate(180deg);
     filter: hue-rotate(180deg);
 }
-.hue-rotate3 
-{
+
+.hue-rotate3 {
     -webkit-filter: hue-rotate(270deg);
     -moz-filter: hue-rotate(270deg);
     -o-filter: hue-rotate(270deg);
     -ms-filter: hue-rotate(270deg);
     filter: hue-rotate(270deg);
 }
-.saturate 
-{
+
+.saturate {
     -webkit-filter: saturate(10);
     -moz-filter: saturate(10);
     -o-filter: saturate(10);
     -ms-filter: saturate(10);
     filter: saturate(10);
 }
+
 .grayscale {
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
@@ -96,6 +100,7 @@ Filters
     -ms-filter: grayscale(1);
     filter: grayscale(1);
 }
+
 .sepia {
     -webkit-filter: sepia(1);
     -moz-filter: sepia(1);
@@ -103,6 +108,7 @@ Filters
     -ms-filter: sepia(1);
     filter: sepia(1);
 }
+
 .invert {
     -webkit-filter: invert(1);
     -moz-filter: invert(1);
