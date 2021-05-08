@@ -42,43 +42,54 @@
         </nav>
     </header>
 
-    <div class="slider-wrap">
-        <section class="home-slider owl-carousel">
-
-            <div class="slider-item">
-                <div class="container">
-                    <div class="row slider-text align-items-center justify-content-center">
-                        <div class="col-md-12 text-center col-sm-12">
-                            <video autoplay></video>
-                            <img>
-                            <canvas></canvas>
-                            <p class="mt-5">
-                                <button class="capture-button">Capturar vídeo</button>
-                                <button class="stop-button" disabled>Parar</button>
-                            </p>
-                            <p>
-                                <label for="filter">Filtro: </label>
-                                <select id="filter">
-                                    <option value=""></option>
-                                    <option value="grayscale">Grayscale</option>
-                                    <option value="blur">Blur</option>
-                                    <option value="brightness">Brightness</option>
-                                    <option value="contrast">Contrast</option>
-                                    <option value="hue-rotate">Hue-Rotate</option>
-                                    <option value="hue-rotate2">Hue-Rotate2</option>
-                                    <option value="hue-rotate3">Hue-Rotate3</option>
-                                    <option value="saturate">Saturate</option>
-                                    <option value="invert">Invert</option>
-                                </select>
-                                <button class="cssfilters-apply" disabled>Aplicar</button>
-                            </p>
-                            <p><button class="screenshot-button" disabled>Capturar imagem</button></p>
-                        </div>
-                    </div>
+    <section class="section" style="background-image: url('./assets/images/background.png');">
+        <div class="container">
+            <div class="row align-items-center justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <video autoplay muted playsinline></video>
+                </div>
+                <div class="image-captured">
+                    <img>
+                </div>
+                <div class="video-captured">
+                    <video class="recorded" playsinline></video>
+                </div>
+                <canvas></canvas>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <button class="capture-button">Iniciar Câmara</button>
+                        <button class="stop-button" disabled>Desligar Câmara</button>
+                    </p>
+                    <p>
+                        <label for="filter">Filtro: </label>
+                        <select id="filter">
+                            <option value=""></option>
+                            <option value="grayscale">Grayscale</option>
+                            <option value="blur">Blur</option>
+                            <option value="brightness">Brightness</option>
+                            <option value="contrast">Contrast</option>
+                            <option value="hue-rotate">Hue-Rotate</option>
+                            <option value="hue-rotate2">Hue-Rotate2</option>
+                            <option value="hue-rotate3">Hue-Rotate3</option>
+                            <option value="saturate">Saturate</option>
+                            <option value="invert">Invert</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button class="screenshot-button" disabled>Capturar imagem</button>
+                        <a download="yoha-picture" class="download-image" href="#"><button class="donwload-img-button" disabled>Download da imagem</button></a>
+                    </p>
+                    <p>
+                        <button class="record" disabled>Iniciar Gravação</button>
+                        <button class="play" disabled>Reproduzir</button>
+                        <button class="download-video" disabled>Download do vídeo</button>
+                    </p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer class="site-footer" role="contentinfo">
 
@@ -97,6 +108,8 @@
         </div>
     </footer>
 
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/popper.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
