@@ -76,6 +76,14 @@ header .navbar .nav-link.active {
     text-decoration: underline;
 }
 
+.section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15em 0;
+    position: relative;
+    z-index: 2;
+}
+
 .btn {
     font-size: 13px;
     text-transform: uppercase;
@@ -95,10 +103,6 @@ header .navbar .nav-link.active {
     border-width: 2px;
 }
 
-.screen {
-    display: contents;
-}
-
 .capture-button,
 .stop-button,
 .screenshot-button,
@@ -112,14 +116,19 @@ canvas {
 
 video,
 img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 
 video,
 img {
     background: #222;
     border: 1px solid #ccc;
+}
+
+.image-captured,
+.video-captured {
+    display: none;
 }
 
 
@@ -135,18 +144,6 @@ img {
 
 /*
 */
-
-.align-items-center {
-    -webkit-box-align: center!important;
-    -ms-flex-align: center!important;
-    align-items: center!important;
-}
-
-.justify-content-center {
-    -webkit-box-pack: center!important;
-    -ms-flex-pack: center!important;
-    justify-content: center!important;
-}
 
 
 /*
