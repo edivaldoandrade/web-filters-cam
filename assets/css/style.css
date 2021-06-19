@@ -79,7 +79,7 @@ header .navbar .nav-link.active {
 .section {
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 15em 0;
+    padding: 8em 0;
     position: relative;
     z-index: 2;
 }
@@ -228,4 +228,8 @@ Filters
     -o-filter: invert(1);
     -ms-filter: invert(1);
     filter: invert(1);
+}
+
+#jeeFaceFilterCanvas{
+    display: block;
 }
