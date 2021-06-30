@@ -28,9 +28,6 @@ header {
     width: 100%;
     z-index: 5;
     padding: 0px 0;
-    @media (min-width: 768px) header {
-        padding: 30px 0;
-    }
 }
 
 header .navbar-brand {
@@ -52,13 +49,27 @@ header .navbar .nav-link.active {
     color: #ff7404!important;
 }
 
+header .navbar .nav-item a:hover {
+    color: #f3d2b7!important;
+}
+
+header .navbar .nav-item a:active {
+    color: #ff7404!important;
+}
+
 .slider-item {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: calc(100vh);
+    height: calc(100vh - 60px);
     min-height: 700px;
     position: relative;
+}
+
+@media (max-width: 767px) {
+    .slider-item {
+        height: calc(100vh - 80px);
+    }
 }
 
 .slider-item .slider-text {
@@ -137,13 +148,30 @@ img {
 .site-footer {
     position: relative;
     z-index: 5;
-    background: #343a40!important;
     font-size: 13px;
+    height: 60px;
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        height: 80px;
+    }
 }
 
 
 /*
+Colors
 */
+
+.bg1 {
+    background-color: #343a40cc;
+}
+
+@media (max-width: 767px) {
+    .bg1 {
+        background-color: #343a40!important;
+    }
+}
 
 
 /*
@@ -230,6 +258,6 @@ Filters
     filter: invert(1);
 }
 
-#jeeFaceFilterCanvas{
+#jeeFaceFilterCanvas {
     display: block;
 }
