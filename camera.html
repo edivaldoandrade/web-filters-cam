@@ -78,6 +78,12 @@
                             <option value="saturate">Saturate</option>
                             <option value="invert">Invert</option>
                         </select>
+                        <select id="faceFilter">
+                            <option value="0"></option>
+                            <option value="1" >Glasses</option>
+                            <option value="2">Football Makeup</option>
+                            <option value="3">Butterflies</option>
+                        </select>
                     </div>
                     <div class="pb-2">
                         <button id="screenshot-button" class="screenshot-button" disabled>Capturar imagem</button>
@@ -120,11 +126,20 @@
     <!-- INCLUDE THREE.JS -->
     <script src="./libs/libs/three/v112/three.js"></script>
 
+    <!-- INCLUDE THREE.JS -->
+    <script src="./libs/libs/three/v97/three.min.js"></script>
+
+    <!-- INCLUDE TWEEN.JS -->
+    <script src="./libs/libs/tween/v16_3_5/Tween.min.js"></script>
+
     <!-- INCLUDE JEELIZ THREE.JS HELPER -->
     <script src="./libs/helpers/JeelizThreeHelper.js"></script>
 
     <!-- INCLUDE JEELIZRESIZER -->
     <script src="./libs/helpers/JeelizResizer.js"></script>
+
+    <!-- INCLUDE ADDDRAGEVENTLISTENER.JS -->
+    <script src="./libs/helpers/addDragEventListener.js"></script>
 
     <!-- INCLUDE DEMO SCRIPT AND GLASSES CREATOR -->
     <script src="./JeelizThreeGlassesCreator.js"></script>

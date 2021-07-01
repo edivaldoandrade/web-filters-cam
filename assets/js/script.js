@@ -8,6 +8,7 @@ const captureVideoButton = document.querySelector("button#capture-button");
 const captureStopButton = document.querySelector("button#stop-button");
 
 const filterSelect = document.querySelector('select#filter');
+
 const screenshotButton = document.querySelector("button#screenshot-button");
 const downloadImg = document.querySelector("a#download-image");
 const downloadImgButton = document.querySelector("button#donwload-img-button");
@@ -20,14 +21,12 @@ const videoCaptured = document.querySelector(".video-captured");
 const imageCaptured = document.querySelector(".image-captured");
 
 const contraints = {
-    video: true,
-    audio: true
+    video: true
 };
 
 
 let mediaRecorder;
 let recordedBlobs;
-// let sourceBuffer;
 
 // filtros css
 let filterIndex = 0;
@@ -44,7 +43,6 @@ const filters = [
     "invert",
     "",
 ];
-
 
 /* 
  **************************************
@@ -76,8 +74,6 @@ filterSelect.onchange = function() {
 }
 
 screenshotButton.onclick = function() {
-    // canvas.width = video.videoWidth;
-    // canvas.height = video.videoHeight;
     canvas.getContext("2d");
 
     img.src = downloadImg.href = canvas.toDataURL("image/png");
