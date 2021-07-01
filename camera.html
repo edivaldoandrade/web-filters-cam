@@ -27,12 +27,15 @@
             </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExample05">
-                    <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+                    <ul class="navbar-nav ml-auto pl-lg-5 pl-0"  id="opcaoMenus">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/edivaldoandrade/web-filters-cam" target="_blank">GitHub</a>
@@ -93,6 +96,7 @@
                         <button id="record" disabled>Iniciar Gravação</button>
                         <button id="play" disabled>Reproduzir</button>
                         <button id="download-video" disabled>Download do vídeo</button>
+                        <button id="salvar-video" disabled>Salvar</button>
                     </div>
                 </div>
             </div>
@@ -116,6 +120,12 @@
         </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="./assets/js/database.js"></script>
     <script src="./assets/js/jquery-3.2.1.min.js"></script>
     <script src="./assets/js/popper.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>

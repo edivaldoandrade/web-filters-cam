@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="pt">
 
 <head>
@@ -15,7 +24,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body onload="getVideos()">
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg1">
@@ -49,17 +58,11 @@
         <section class="home-slider owl-carousel">
 
             <div class="slider-item" style="background-image: url('./assets/images/background.png');">
-                <div class="container">
-                    <div class="row slider-text align-items-center justify-content-center">
-                        <div class="col-md-8 text-center col-sm-12 ">
-                            <h1 data-aos="mb-5">YOHA</h1>
-                            <p>Tire fotos online e grave vídeos divertidos</p>
-                            <p>Cabine fotográfica e gravador de vídeo online</p>
-                            <p>Efeitos e filtros para fotos e vídeos</p>
-                            <p><a href="camera.html" class="btn btn-white btn-outline-white mt-4">Começar</a></p>
+                
+                        <div id="videos" style="display:flex; column-gap: 5vh; flex-flow: row wrap; padding-top: 15vh;">
+                            
                         </div>
-                    </div>
-                </div>
+                    
             </div>
         </section>
     </div>
@@ -80,14 +83,17 @@
             </div>
         </div>
     </footer>
-
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
     <script src="./assets/js/database.js"></script>
     <script src="./assets/js/jquery-3.2.1.min.js"></script>
     <script src="./assets/js/popper.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 
+</html>
+</body>
 </html>
