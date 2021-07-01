@@ -116,8 +116,7 @@ header .navbar .nav-item a:active {
 
 .capture-button,
 .stop-button,
-.screenshot-button,
-.cssfilters-apply {
+.screenshot-button {
     vertical-align: inherit;
 }
 
@@ -126,13 +125,10 @@ canvas {
 }
 
 video,
-img {
+img,
+canvas {
     width: 100%;
     height: auto;
-}
-
-video,
-img {
     background: #222;
     border: 1px solid #ccc;
 }
