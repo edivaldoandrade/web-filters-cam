@@ -16,7 +16,7 @@
 
 </head>
 
-<body onload="main()">
+<body>
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg1">
@@ -46,29 +46,25 @@
     <section class="section" style="background-image: url('./assets/images/background.png');">
         <div class="container">
             <div class="row align-items-center justify-content-center mb-5">
-                <div class="col-lg-6">
-                    <canvas width="500" height="400" id='jeeFaceFilterCanvas'></canvas>
-                    <!--  <video autoplay muted playsinline></video>-->
-                </div>
-                <div class="image-captured">
+                <div class="image-captured pb-2">
                     <img>
                 </div>
                 <div class="video-captured">
-                    <video class="recorded" id="recorded" playsinline loop></video>
-                    <!--<video class="recorded" playsinline></video>-->
+                    <video id="recorded" playsinline></video>
                 </div>
-                <!--<canvas></canvas>-->
+                <div class="col-lg-6 pt-2">
+                    <canvas width="500" height="400" id='jeeFaceFilterCanvas'></canvas>
+                </div>
             </div>
+
             <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <p>
-                        <!--<button class="capture-button">Iniciar Câmara</button>
-                        <button class="stop-button" disabled>Desligar Câmara</button>-->
-                        <button id="record">Iniciar Gravação</button>
-                        <button id="play" disabled>Reproduzir</button>
-                        <button id="download" disabled>Download</button>
-                    </p>
-                    <p>
+                <div class="col-md-6 text-center">
+                    <div class="text-danger bg-dark" id="errorMsg"></div>
+                    <div class="pb-2">
+                        <button id="capture-button" class="capture-button">Ligar Câmara</button>
+                        <button id="stop-button" class="stop-button" disabled>Desligar Câmara</button>
+                    </div>
+                    <div>
                         <label for="filter">Filtro: </label>
                         <select id="filter">
                             <option value=""></option>
@@ -82,9 +78,16 @@
                             <option value="saturate">Saturate</option>
                             <option value="invert">Invert</option>
                         </select>
-                    </p>
-
-
+                    </div>
+                    <div class="pb-2">
+                        <button id="screenshot-button" class="screenshot-button" disabled>Capturar imagem</button>
+                        <a download="yoha-picture" id="download-image" href="#"><button id="donwload-img-button" disabled>Download da imagem</button></a>
+                    </div>
+                    <div>
+                        <button id="record" disabled>Iniciar Gravação</button>
+                        <button id="play" disabled>Reproduzir</button>
+                        <button id="download-video" disabled>Download do vídeo</button>
+                    </div>
                 </div>
             </div>
         </div>
