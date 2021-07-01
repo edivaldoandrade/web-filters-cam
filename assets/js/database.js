@@ -20,7 +20,7 @@ let uid;
 
 const signOut=()=>{
     firebase.auth().signOut().then(function() {
-        window.location.href = '../index.html';
+        window.location.href = 'index.html';
         let menu=document.getElementById("opcaoMenus");
         menu.removeChild(menu.childNodes[4])
     }).catch(function(error) {
@@ -113,4 +113,3 @@ const getVideos=()=>{
 
 
 
-console.log("opla")
