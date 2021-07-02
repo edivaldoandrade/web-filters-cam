@@ -16,7 +16,7 @@ const downloadImgButton = document.querySelector("button#donwload-img-button");
 const recordButton = document.querySelector('button#record');
 const playButton = document.querySelector('button#play');
 const downloadVideoButton = document.querySelector('button#download-video');
-const saveVideoButton= document.querySelector('button#salvar-video');
+const saveVideoButton = document.querySelector('button#salvar-video');
 
 const videoCaptured = document.querySelector(".video-captured");
 const imageCaptured = document.querySelector(".image-captured");
@@ -93,7 +93,7 @@ recordButton.addEventListener('click', () => {
         captureStopButton.disabled = false;
         playButton.disabled = false;
         downloadVideoButton.disabled = false;
-        saveVideoButton.disabled=false;
+        saveVideoButton.disabled = false;
     }
 });
 
@@ -120,7 +120,7 @@ downloadVideoButton.addEventListener('click', () => {
         document.body.removeChild(a);
         window.URL.revokeObjectURL(url);
     }, 100);
-   
+
 });
 
 saveVideoButton.addEventListener('click', () => {
@@ -157,7 +157,7 @@ function startRecording() {
     recordButton.textContent = 'Parar Gravação';
     playButton.disabled = true;
     downloadVideoButton.disabled = true;
-    saveVideoButton.disabled=true;
+    saveVideoButton.disabled = true;
     mediaRecorder.onstop = (event) => {
         console.log('Recorder stopped: ', event);
         console.log('Recorded Blobs: ', recordedBlobs);
@@ -205,41 +205,42 @@ function errorMsg(msg, error) {
     }
 }
 
-function saveVideo(bob){
+function saveVideo(bob) {
     firebase.auth().onAuthStateChanged(function(user) {
-        if (user){
-            
-            firebase.firestore().collection("count").doc("count").get()
-            .then((doc) => {
-            
-            let id=(+doc.data().id)
-                    ++id;
-                    var storage = firebase.storage();
-            storage.ref().child('videos/'+id+'.mp4')
-            .put(bob)
-            .then(function(snapshot) {
-                snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        if (user) {
 
-                    firebase.firestore().collection("videos").add({
-                        uid: user.uid,
-                        url: downloadURL
-                    }).then(() => {
-                        alert("Video salvo com Sucesso")
-                    });
-                    firebase.firestore().collection("count").doc("count").set({
-                       id:id
-                    })
-                  });
-            });
-               
-            });
-        
-            
+            firebase.firestore().collection("count").doc("count").get()
+                .then((doc) => {
+
+                    let id = (+doc.data().id)
+                        ++id;
+                    var storage = firebase.storage();
+                    storage.ref().child('videos/' + id + '.mp4')
+                        .put(bob)
+                        .then(function(snapshot) {
+                            snapshot.ref.getDownloadURL().then(function(downloadURL) {
+
+                                firebase.firestore().collection("videos").add({
+                                    uid: user.uid,
+                                    url: downloadURL
+                                }).then(() => {
+                                    alert("Video salvo com Sucesso")
+                                });
+                                firebase.firestore().collection("count").doc("count").set({
+                                    id: id
+                                })
+                            });
+                        });
+
+                });
+
+
+        } else {
+            alert("Deve fazer o login para salvar...")
         }
-        
+
     });
-    
+
 
 
 }
-
